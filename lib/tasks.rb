@@ -1,6 +1,5 @@
 class Tasks
   def self.Tasks
-
   end
 
   def get
@@ -12,5 +11,11 @@ class Tasks
       end
     end
     tasklist
+  end
+
+  def retrieve_notification_time(task)
+    timesegment = task.match(/{\d{8}\s{1}\d{4}}/)[0].delete("{").delete("}")
+    time = Time.strptime(timesegment, "%Y%m%d %H%M")
+    time
   end
 end
