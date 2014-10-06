@@ -1,9 +1,13 @@
 require 'tasks'
 
 describe Tasks do
+  let(:tasks) {Tasks.new}
+  subject {tasks.get}
+
   it "returns a list of tasks" do
-    tasks = Tasks.new
-    items = tasks.get
-    expect(items.count).to be > 0
+    expect(subject.count).to be > 0
+  end
+  it "returns a list only containing reminder syntax" do
+    
   end
 end

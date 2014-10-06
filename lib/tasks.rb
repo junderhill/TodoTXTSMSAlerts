@@ -7,7 +7,7 @@ class Tasks
     tasklist = []
     f = File.open("/home/jason/Dropbox/todo/todo.txt", "r")
     f.each_line do |line|
-      if (line =~ /\{{8}\d{1}\s{4}\d\}/)
+      if (line =~ /{\d{8}\s\d{4}}/)
         tasklist.push(line)
       end
     end
