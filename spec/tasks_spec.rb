@@ -28,4 +28,16 @@ describe Tasks do
     expect(result.hour).to eq 13
     expect(result.min).to eq 30
   end
+
+ it "returns true if current time matches notification time" do
+   stubNotifyTime = Time.new
+   result = subject.should_notify(stubNotifyTime)
+   expect(result).to be true
+ end
+
+ it "returns false if current time dosent match notification time" do
+  stubNotifyTime = Time.new(2013,12,30,12,00,00)
+  result = subject.should_notify(stubNotifyTime)
+  expect(result).to be false
+ end
 end

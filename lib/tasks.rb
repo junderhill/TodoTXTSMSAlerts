@@ -18,4 +18,25 @@ class Tasks
     time = Time.strptime(timesegment, "%Y%m%d %H%M")
     time
   end
+
+  def should_notify(notifytime)
+    currentTime = Time.new
+    if(currentTime.year != notifytime.year)
+      return false
+    end
+    if(currentTime.month != notifytime.month)
+      return false
+    end
+    if(currentTime.day != notifytime.day)
+      return false
+    end
+    if(currentTime.hour != notifytime.hour)
+      return false
+    end
+    if(currentTime.min != notifytime.min)
+      return false
+    else
+      return true
+    end
+  end
 end
