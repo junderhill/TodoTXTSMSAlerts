@@ -4,7 +4,14 @@ GEM
     ZenTest (4.11.0)
     autotest (4.4.6)
       ZenTest (>= 4.4.1)
+    clockworksms (1.2.1)
+      faraday (~> 0.8)
+      nokogiri (~> 1.5.2)
     diff-lcs (1.2.5)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    multipart-post (2.0.0)
+    nokogiri (1.5.11)
     redgreen (1.2.2)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
@@ -26,6 +33,7 @@ PLATFORMS
 
 DEPENDENCIES
   autotest
+  clockworksms
   redgreen
   rspec
   rspec-autotest
