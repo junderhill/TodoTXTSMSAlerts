@@ -1,10 +1,10 @@
 
 describe SMS do
-  let(:mockClockworkApi){ double{"ClockworkApi"} }
+  let(:mock_clockwork_api){ double{"ClockworkApi"} }
   subject { SMS.new(mockClockworkApi) }
   context ".build" do
     it "should call messages.build" do
-      :mockClockworkApi.should_receive(:build).once
+    
     end
   end
 
